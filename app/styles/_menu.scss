@@ -1,0 +1,13 @@
+.menu {
+    @extend %display-flex-cc;
+    position: sticky;
+    top: 0;
+    background: lightgray;
+    height: $nav-height;
+
+    li {
+        display: inline-block;
+        font-family: $font-family-2;
+        margin: 16px;
+    }
+}
