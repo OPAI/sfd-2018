@@ -1,30 +1,20 @@
 window.onload = () => {
-    let countDownDate = new Date("Aug 6, 2018").getTime();
-    let countdownElement = document.querySelector("#countdown");
-    let updateCountdown = function() {
-        let evaluate = value => value < 10 ? `0${value}` : value;
+    const opener = document.querySelector("#opener");
+    const closer = document.querySelector("#closer");
+    const menu = document.querySelector('.menu');
 
-        // Find the distance between now an the count down date
-        let distance = countDownDate - Date.now();
-        
-        // Time calculations for days, hours, minutes and seconds
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        
-        // Display the result in the element with id="demo"
-        countdownElement.innerHTML = `
-            <span class="clock">${evaluate(days)}</span> dia${days == 1 ? '' : 's'}, 
-            <span class="clock">${evaluate(hours)}</span> hora${hours == 1 ? '' : 's'} e 
-            <span class="clock">${evaluate(minutes)}</span> minuto${minutes == 1 ? '' : 's'}`;
-        
-        // If the count down is finished, write some text 
-        if (distance <= 0) {
-            intervalControl && clearInterval(intervalControl);
-            countdownElement.innerHTML = "O evento começou! Aproveite!";
-        }
-    };
+    opener.addEventListener('click', event => menu.classList.add('active'));
+    closer.addEventListener('click', event => menu.classList.remove('active'));
 
-    let intervalControl = setInterval(updateCountdown, 60000);
-    updateCountdown();
+    //Starts Countdown
+    startCountdown();
+
+    //Smooth Scroll Config
+    document.querySelectorAll('.link-to').forEach(element => {
+        element.addEventListener('click', event => {
+            event.preventDefault();
+            menu.classList.remove('active');
+            scrollToItem(document.querySelector(element.href.substring(element.href.lastIndexOf('#'))));
+        });
+    });
 };

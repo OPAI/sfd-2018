@@ -74,6 +74,8 @@ const paths = {
         origin: {
             internal_root: `${project_src}/scripts`,
             internal: [
+                `${project_src}/scripts/countdown.js`,
+                `${project_src}/scripts/smooth-scroll.js`,
                 `${project_src}/scripts/script.js`
             ],
             external: [

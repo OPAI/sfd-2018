@@ -1,13 +1,28 @@
 //Sizes
 $nav-height: 76px;
 
+//Font Size
+$font-size-1: 24px;
+$font-size-2: 18px;
+$font-size-3: 32px;
+
 //Font Families
 $font-family-1: OpenSansRegular, sans-serif;
 $font-family-2: OpenSansSemibold, sans-serif;
+$font-family-3: Lobster, $font-family-2;
 
 //Colors
-$base-color: #BE4E4C;
 $color-1: #444;
-$color-link: #ab12ea;
-$color-link-visited: #ab12ea;
-$countdown-color: $base-color;
+$color-2: #fff;
+$color-3: #BE4E4C;
+$color-4: #ab12ea;
+
+$base-color: $color-3;
+$base-color-contrast: $color-2;
+$color-link: $color-4;
+$color-link-visited: $color-4;
+$countdown-color: lighten($base-color, 20);
+$shadow-color: rgba(#444, .5);
+
+//Media Queries
+$mobile: all and (min-width: 400px);

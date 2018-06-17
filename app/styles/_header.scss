@@ -1,12 +1,14 @@
 header {
-    @extend %display-flex-cc;
+    $font-size-countdown: 30px;
+
+    @extend %display-flex-cc-c;
 
     height: calc(100vh - #{$nav-height});
     background-color: whitesmoke;
-    background-image: url(../images/salvador-background-1.jpg);
+    background-image: url(../images/salvador-background-2.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center bottom;
     position: relative;
 
     * {
@@ -24,12 +26,58 @@ header {
         z-index: 0;
     }
 
+    #logo {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    #eventdate {
+        font-size: 32px;
+        font-family: $font-family-3;
+        color: $color-2;
+        position: absolute;
+        bottom: calc(10% + #{$font-size-countdown} + 5%);
+        text-align: center;
+
+        @include responsive(mobile) {
+            font-size: 26px;
+            padding: 0 16px;
+        }
+    }
+
     #countdown {
         font-family: digital7;
-        font-size: 1.6em;
+        font-size: $font-size-countdown;
         font-weight: 600;
         position: absolute;
         bottom: 10%;
         color: $countdown-color;
+        text-align: center;
+
+        @include responsive(mobile) {
+            font-size: 18px;
+            width: 100%;
+            padding: 0 16px;
+        }
+    }
+
+    #opener {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+
+        path {
+            fill: $base-color;
+        }
+        
+        @include responsive(mobile) {
+            display: block;
+        }
+    }
+    
+    @include responsive(mobile) {
+        height: 100vh;
     }
 }
