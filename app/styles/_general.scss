@@ -39,6 +39,14 @@ a {
     transition: transform 0.6s ease-in-out;
     backface-visibility: hidden;
 
+    &-small {
+        min-height: 50vh;
+    }
+
+    &-bgw {
+        background: white;
+    }
+
     h1 {
         text-align: center;
         font-family: $font-family-3;
@@ -55,19 +63,25 @@ a {
     background-position: center;
     background-attachment: fixed;
 
-    &-1 { background-image: url(../images/salvador-background-2.jpg) }
+    &-1 { background-image: url(../images/salvador-background-1.jpg) }
     &-2 { background-image: url(../images/salvador-background-3.jpg) }
+    &-3 { background-image: url(../images/salvador-background-4.jpg) }
 }
 
 .cards {
     @extend %display-flex-cc;
     flex-wrap: wrap;
     margin-top: 20px;
+    min-height: 80vh;
+}
+
+.section-small .cards {
+    min-height: 30vh;
 }
 
 .card {
     width: 90%;
-    max-width: 460px;
+    max-width: 400px;
     border: 1px solid lightgray;
     border-radius: 4px;
     margin: 5px;
