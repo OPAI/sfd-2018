@@ -78,6 +78,17 @@ header {
     }
     
     @include responsive(mobile) {
+        $margin: 12px;
         height: 100vh;
+
+        #logo {
+            margin-bottom: $margin;
+        }
+
+        #eventdate, #countdown {
+            position: relative !important;
+            margin: $margin 0 !important;
+            bottom: 0 !important;
+        }
     }
 }
