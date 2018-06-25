@@ -37,7 +37,7 @@ header {
         font-family: $font-family-3;
         color: $color-2;
         position: absolute;
-        bottom: calc(10% + #{$font-size-countdown} + 5%);
+        bottom: calc(10% + #{$font-size-countdown} + 3%);
         text-align: center;
 
         @include responsive(mobile) {
