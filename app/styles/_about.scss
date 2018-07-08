@@ -25,7 +25,12 @@
     }
 
     img {
-        width: 100%;
-        max-width: 500px;
+        width: 400px;
+        max-width: 100%;
+        margin-left: 16px;
+        
+        @include responsive(mobile) {
+            margin-left: 0;
+        }
     }
 }
