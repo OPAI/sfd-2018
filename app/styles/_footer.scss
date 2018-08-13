@@ -1,18 +1,8 @@
 footer {
-    @extend %display-flex-cc;
-    justify-content: space-between;
     background: $base-color;
     padding: 30px;
     color: white;
     font-size: $font-size-2;
     font-family: $font-family-2;
-    
-    @include responsive(mobile) {
-        flex-direction: column;
-    
-        span {
-            text-align: center;
-            margin-top: 16px;
-        }
-    }
+    text-align: center;
 }

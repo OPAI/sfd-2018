@@ -1,5 +1,5 @@
 function startCountdown() {
-    let countDownDate = new Date("Aug 6, 2018").getTime();
+    let countDownDate = new Date("Sep 15, 2018").getTime();
     let countdownElement = document.querySelector("#countdown");
     let updateCountdown = function() {
         let evaluate = value => value < 10 ? `0${value}` : value;

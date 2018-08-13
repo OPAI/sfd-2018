@@ -1,36 +1,19 @@
 #about {
-    padding-left: 30px;
-    padding-right: 30px;
-
-    .wrapper {
-        @extend %display-flex-cc;
-        
-        margin-top: 16px;
-        margin-bottom: 16px;
-        align-items: flex-start;
-
-        @include responsive(mobile) {
-            flex-wrap: wrap;
-
-            img {
-                margin-top: 16px;
-            }
-        }
+    h1 {
+        margin-bottom: 32px;
     }
 
     p {
         font-family: $font-family-2;
         font-size: $font-size-2;
         line-height: 1.5em;
+        margin-top: 16px;
+        padding: 0 12%;
     }
 
-    img {
-        width: 400px;
-        max-width: 100%;
-        margin-left: 16px;
-        
-        @include responsive(mobile) {
-            margin-left: 0;
-        }
+    @include responsive(mobile) {
+        p {
+            padding: 0 4%;
+        }    
     }
 }

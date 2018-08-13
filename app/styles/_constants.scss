@@ -14,13 +14,13 @@ $font-family-3: Lobster, $font-family-2;
 //Colors
 $color-1: #444;
 $color-2: #fff;
-$color-3: #BE4E4C;
+$color-3: darken(#F9BD3C, 5);
 $color-4: whitesmoke;
 
 $base-color: $color-3;
 $base-color-contrast: $color-2;
-$color-link: $color-1;
-$color-link-visited: $color-4;
+$color-link: $color-3;
+$color-link-visited:darken($color-3, 30);
 $countdown-color: lighten($base-color, 20);
 $shadow-color: rgba(#444, .5);
 
