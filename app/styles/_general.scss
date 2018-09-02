@@ -145,9 +145,11 @@ a {
 
 //Timeline
 .history-main-title {
-    font-size: $font-size-1;
+    font-size: $font-size-2;
     font-family: $font-family-2;
     color: darken($base-color, 15);
+    margin-bottom: 16px;
+    text-align: center;
 }
 .history-tl-container{
     font-family: $font-family-2;
@@ -194,6 +196,12 @@ ul.tl li .item-title{
 ul.tl li .item-detail{
     color:rgba(0,0,0,0.5);
     font-size:12px;
+}
+ul.tl li .item-detail.subdetail{
+    color:rgba(0,0,0,0.3);
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 1.3em;
 }
 ul.tl li .timestamp{
     color: #8D8D8D;
